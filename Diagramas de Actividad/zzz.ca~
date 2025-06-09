@@ -1,0 +1,4094 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	0)
+
+(object Class_Category "zzzzzzz"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5543095500AC"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object UseCase "UC01 Administrar productos"
+	    quid       	"5543149700FA"
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"C:\\Users\\Junior\\OneDrive\\Desktop\\Proyecto Sistema De Inventario\\Documentacion de UC\\UC01 - Administrar Productos.docx")))
+	(object UseCase "UC02 Administrar proveedores"
+	    quid       	"5543160703C8"
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"C:\\Users\\Junior\\OneDrive\\Desktop\\Proyecto Sistema De Inventario\\Documentacion de UC\\UC02 - Administrar Proveedores.docx")))
+	(object UseCase "UC03 Administrar clientes"
+	    quid       	"55431638004E"
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"C:\\Users\\Junior\\OneDrive\\Desktop\\Proyecto Sistema De Inventario\\Documentacion de UC\\UC03 - Administrar Clientes.docx")))
+	(object UseCase "UC04 Administrar usuarios"
+	    quid       	"5543164803C8"
+	    external_docs 	(list external_doc_list
+		(object external_doc
+		    external_doc_path 	"C:\\Users\\Junior\\OneDrive\\Desktop\\Proyecto Sistema De Inventario\\Documentacion de UC\\UC04 - Administrar Usuarios.docx"))
+	    statemachine 	(object State_Machine "State/Activity Model2"
+		quid       	"48C8A5ED002F"
+		states     	(list States
+		    (object State "$UNNAMED$0"
+			quid       	"48C8A67E02B0"
+			type       	"EndState")
+		    (object State "clic en el boton <Administrar usuarios>"
+			quid       	"48C8A682004E"
+			type       	"StartState")
+		    (object ActivityState "Validar btnAdministrar_Usuario"
+			quid       	"48C8A6D401B6")
+		    (object Decision "btnAdministrar_Usuarios = ??"
+			quid       	"48C8A83801C5")
+		    (object ActivityState "Buscar todos los usuarios registrados"
+			quid       	"48C8A9900204")
+		    (object ActivityState "mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			quid       	"48C8A9940020")
+		    (object Decision "usuarios encontrados con existo?"
+			quid       	"48C8AA1A01C5")
+		    (object ActivityState "mostrar modal <Bienvenido!, Administrador>:Error en la BD"
+			quid       	"48C8AA9701C5")
+		    (object ActivityState "Mostrar registro de clientes en vista <Administrar usuarios>"
+			quid       	"48C8AAC000FA")
+		    (object State "$UNNAMED$1"
+			quid       	"48C8AAE701B6"
+			type       	"EndState")
+		    (object Decision "$UNNAMED$2"
+			quid       	"48C8ABBD036B")
+		    (object ActivityState "Validar btnVerDetalles"
+			quid       	"48C8AC0D035C")
+		    (object ActivityState "Validar btnNuevoUsuario"
+			quid       	"48C8AC38034C")
+		    (object Decision "btnNuevoUsuario = NULL?"
+			quid       	"48C8ACA203D9")
+		    (object ActivityState "mostrar el modal de formulario <Registrar nuevo Usuario>"
+			quid       	"48C8ACCC005E")
+		    (object State "$UNNAMED$3"
+			quid       	"48C8AD1800FA"
+			type       	"EndState")
+		    (object Decision "operacion?"
+			quid       	"48C8AE750291")
+		    (object ActivityState "validar btnGuardar"
+			quid       	"48C8AE9602B0")
+		    (object Decision "$UNNAMED$4"
+			quid       	"48C8AEFF0000")
+		    (object ActivityState "verificar si los datos ingresados son validos"
+			quid       	"48C8AF2400BC")
+		    (object State "$UNNAMED$5"
+			quid       	"48C8AF540129"
+			type       	"EndState")
+		    (object Decision "datos correctos?"
+			quid       	"48C8AFA301B6")
+		    (object ActivityState "Guardar registro en la BD"
+			quid       	"48C8B06B004E")
+		    (object Decision "Datos guardados correctamente?"
+			quid       	"48C8B0A3034C")
+		    (object State "$UNNAMED$6"
+			quid       	"48C8B4910129"
+			type       	"EndState")
+		    (object State "Mostrar vista <Administrar Usuarios> con nuevo usuario registrado"
+			quid       	"48C8B49C0177"
+			type       	"EndState")
+		    (object ActivityState "Validar btnVolverAlaPaginaAnterior"
+			quid       	"48C8B4E4005E")
+		    (object Decision "$UNNAMED$7"
+			quid       	"48C8B55100FA")
+		    (object State "$UNNAMED$8"
+			quid       	"48C8B595005E"
+			type       	"EndState")
+		    (object ActivityState "mostrar modal <Bienvenido!, Administrador>:Satisfactorio"
+			quid       	"48C8B7720129")
+		    (object Decision "$UNNAMED$9"
+			quid       	"48C8B85D0233")
+		    (object ActivityState "Buscar el usuario correspondiente en la BD"
+			quid       	"48C8B8B5030E")
+		    (object Decision "$UNNAMED$10"
+			quid       	"48C8B8DA0168")
+		    (object State "$UNNAMED$11"
+			quid       	"48C8B9280223"
+			type       	"EndState")
+		    (object State "$UNNAMED$12"
+			quid       	"48C8B92A010A"
+			type       	"EndState")
+		    (object ActivityState "Mostrar Registro del usuario Seleccionado en vista <Datos del usuario>"
+			quid       	"48C8BA00030E")
+		    (object ActivityState "Validar btnEditarUsuario"
+			quid       	"48C8BA8300CB")
+		    (object Decision "btnEditarUsuario = NULL?"
+			quid       	"48C8BAE9034C")
+		    (object State "$UNNAMED$13"
+			quid       	"48C8BB700187"
+			type       	"EndState")
+		    (object ActivityState "mostrar verificar si los datos ingresados son validos"
+			quid       	"48C8BB8C02A0")
+		    (object State "ID"
+			quid       	"48C8BBB802BF"
+			type       	"Normal")
+		    (object State "ID
+Nombre y Apellido
+Usuario
+Contraseña
+Rol"
+			quid       	"48C8BBD102DF"
+			documentation 	
+|ID
+|Nombre y Apellido
+|Usuario
+|Contraseña
+|Rol
+			
+			type       	"Normal")
+		    (object State "$UNNAMED$14"
+			quid       	"48C8BBF10223"
+			type       	"Normal")
+		    (object ActivityState "NewActivity7"
+			quid       	"48C8BDBC006E")
+		    (object Decision "$UNNAMED$15"
+			quid       	"48C8BE3501C5")
+		    (object State "$UNNAMED$16"
+			quid       	"48C8BEA20204"
+			type       	"EndState")
+		    (object ActivityState "Acepta la modificación del Usuario en la BD"
+			quid       	"48C8BF260129")
+		    (object Decision "$UNNAMED$17"
+			quid       	"48C8BF54007D")
+		    (object State "$UNNAMED$18"
+			quid       	"48C8BF750020"
+			type       	"EndState")
+		    (object ActivityState "Mostrar vista <Datos de cliente> con detalles de cliente actualizado"
+			quid       	"48C8BF87039A"
+			statemachine 	(object State_Machine "State/Activity Model3"
+			    quid       	"48C8BFAA0281"
+			    states     	(list States
+				(object State "$UNNAMED$19"
+				    quid       	"48C8BFAA0283"
+				    type       	"EndState"))
+			    partitions 	(list Partitions)
+			    objects    	(list Objects)
+			    transitions 	(list transition_list)
+			    objectflows 	(list objectflow_list)
+			    statediagrams 	(list StateDiagrams)))
+		    (object State "Mostrar vista <Datos de cliente> con detalles de cliente actualizadoS"
+			quid       	"48C8BFAD0242"
+			type       	"EndState"))
+		partitions 	(list Partitions
+		    (object Partition "usuario"
+			quid       	"48C8A60B01F4"
+			class      	"Use Case View::Actores::Administrador"
+			quidu      	"55430AC002EE"
+			persistence 	"Transient"
+			creationObj 	FALSE
+			multi      	FALSE)
+		    (object Partition "Sistema"
+			quid       	"48C8A61801A6"
+			persistence 	"Transient"
+			creationObj 	FALSE
+			multi      	FALSE))
+		objects    	(list Objects)
+		transitions 	(list transition_list
+		    (object State_Transition
+			quid       	"48C8A70A0197"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnAdministrar_Usuario"
+			supplier_quidu 	"48C8A6D401B6"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::clic en el boton <Administrar usuarios>"
+			client_quidu 	"48C8A682004E"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8A70A019A"))
+		    (object State_Transition
+			quid       	"48C8A83D0129"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::btnAdministrar_Usuarios = ??"
+			supplier_quidu 	"48C8A83801C5"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnAdministrar_Usuario"
+			client_quidu 	"48C8A6D401B6"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8A83D012C"))
+		    (object State_Transition
+			quid       	"48C8A9B7010A"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			supplier_quidu 	"48C8A9940020"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::btnAdministrar_Usuarios = ??"
+			client_quidu 	"48C8A83801C5"
+			Event      	(object Event "null"
+			    quid       	"48C8A9B7010B")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8A9B7010D"))
+		    (object State_Transition
+			quid       	"48C8A9CB03B9"
+			supplier   	"$UNNAMED$0"
+			supplier_quidu 	"48C8A67E02B0"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			client_quidu 	"48C8A9940020"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8A9CB03BC"))
+		    (object State_Transition
+			quid       	"48C8A9E0037B"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Buscar todos los usuarios registrados"
+			supplier_quidu 	"48C8A9900204"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::btnAdministrar_Usuarios = ??"
+			client_quidu 	"48C8A83801C5"
+			Event      	(object Event "not null"
+			    quid       	"48C8A9E0037C")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8A9E0037E"))
+		    (object State_Transition
+			quid       	"48C8AA1E031D"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::usuarios encontrados con existo?"
+			supplier_quidu 	"48C8AA1A01C5"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Buscar todos los usuarios registrados"
+			client_quidu 	"48C8A9900204"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AA1E0320"))
+		    (object State_Transition
+			quid       	"48C8AAA90168"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Error en la BD"
+			supplier_quidu 	"48C8AA9701C5"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::usuarios encontrados con existo?"
+			client_quidu 	"48C8AA1A01C5"
+			Event      	(object Event "No"
+			    quid       	"48C8AAA90169")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AAA9016B"))
+		    (object State_Transition
+			quid       	"48C8AADA00CB"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Mostrar registro de clientes en vista <Administrar usuarios>"
+			supplier_quidu 	"48C8AAC000FA"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::usuarios encontrados con existo?"
+			client_quidu 	"48C8AA1A01C5"
+			Event      	(object Event "Si"
+			    quid       	"48C8AADA00CC")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AADA00CE"))
+		    (object State_Transition
+			quid       	"48C8AAEB0010"
+			supplier   	"$UNNAMED$1"
+			supplier_quidu 	"48C8AAE701B6"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Error en la BD"
+			client_quidu 	"48C8AA9701C5"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AAEB0013"))
+		    (object State_Transition
+			quid       	"48C8ABC3004E"
+			label      	""
+			supplier   	"$UNNAMED$2"
+			supplier_quidu 	"48C8ABBD036B"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Mostrar registro de clientes en vista <Administrar usuarios>"
+			client_quidu 	"48C8AAC000FA"
+			Event      	(object Event "Operacion?"
+			    quid       	"48C8ABC3004F")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8ABC30051"))
+		    (object State_Transition
+			quid       	"48C8AC46038B"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnNuevoUsuario"
+			supplier_quidu 	"48C8AC38034C"
+			client     	"$UNNAMED$2"
+			client_quidu 	"48C8ABBD036B"
+			Event      	(object Event "Presionar btnNuevoUsuario"
+			    quid       	"48C8AC46038C")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AC46038E"))
+		    (object State_Transition
+			quid       	"48C8AC49002F"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnVerDetalles"
+			supplier_quidu 	"48C8AC0D035C"
+			client     	"$UNNAMED$2"
+			client_quidu 	"48C8ABBD036B"
+			Event      	(object Event "Presionar btnVerDetalles"
+			    quid       	"48C8AC490030")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AC490032"))
+		    (object State_Transition
+			quid       	"48C8ACA80139"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::btnNuevoUsuario = NULL?"
+			supplier_quidu 	"48C8ACA203D9"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnNuevoUsuario"
+			client_quidu 	"48C8AC38034C"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8ACA8013C"))
+		    (object State_Transition
+			quid       	"48C8AD0C038B"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			supplier_quidu 	"48C8A9940020"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::btnNuevoUsuario = NULL?"
+			client_quidu 	"48C8ACA203D9"
+			Event      	(object Event "null"
+			    quid       	"48C8AD0C038C")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AD0C038E"))
+		    (object State_Transition
+			quid       	"48C8AD1A0214"
+			supplier   	"$UNNAMED$3"
+			supplier_quidu 	"48C8AD1800FA"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			client_quidu 	"48C8A9940020"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AD1A0217"))
+		    (object State_Transition
+			quid       	"48C8AD38030E"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar el modal de formulario <Registrar nuevo Usuario>"
+			supplier_quidu 	"48C8ACCC005E"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::btnNuevoUsuario = NULL?"
+			client_quidu 	"48C8ACA203D9"
+			Event      	(object Event "not null"
+			    quid       	"48C8AD38030F")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AD380311"))
+		    (object State_Transition
+			quid       	"48C8AE7A01E5"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::operacion?"
+			supplier_quidu 	"48C8AE750291"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar el modal de formulario <Registrar nuevo Usuario>"
+			client_quidu 	"48C8ACCC005E"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AE7A01E8"))
+		    (object State_Transition
+			quid       	"48C8AEDA00DB"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::validar btnGuardar"
+			supplier_quidu 	"48C8AE9602B0"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::operacion?"
+			client_quidu 	"48C8AE750291"
+			Event      	(object Event "presionar btnGuardar"
+			    quid       	"48C8AEDA00DC")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AEDA00DE"))
+		    (object State_Transition
+			quid       	"48C8AF06011A"
+			label      	""
+			supplier   	"$UNNAMED$4"
+			supplier_quidu 	"48C8AEFF0000"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::validar btnGuardar"
+			client_quidu 	"48C8AE9602B0"
+			Event      	(object Event "btnGuardar = NULL?"
+			    quid       	"48C8AF06011B")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AF06011D"))
+		    (object State_Transition
+			quid       	"48C8AF4D0281"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			supplier_quidu 	"48C8A9940020"
+			client     	"$UNNAMED$4"
+			client_quidu 	"48C8AEFF0000"
+			Event      	(object Event "NULL"
+			    quid       	"48C8AF4D0282")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AF4D0284"))
+		    (object State_Transition
+			quid       	"48C8AF56030E"
+			supplier   	"$UNNAMED$5"
+			supplier_quidu 	"48C8AF540129"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			client_quidu 	"48C8A9940020"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AF560311"))
+		    (object State_Transition
+			quid       	"48C8AF65009D"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::verificar si los datos ingresados son validos"
+			supplier_quidu 	"48C8AF2400BC"
+			client     	"$UNNAMED$4"
+			client_quidu 	"48C8AEFF0000"
+			Event      	(object Event "NOT NULL"
+			    quid       	"48C8AF65009E")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AF6500A0"))
+		    (object State_Transition
+			quid       	"48C8AFE70168"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::datos correctos?"
+			supplier_quidu 	"48C8AFA301B6"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::verificar si los datos ingresados son validos"
+			client_quidu 	"48C8AF2400BC"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8AFE7016B"))
+		    (object State_Transition
+			quid       	"48C8B025010A"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			supplier_quidu 	"48C8A9940020"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::datos correctos?"
+			client_quidu 	"48C8AFA301B6"
+			Event      	(object Event "incorrecto"
+			    quid       	"48C8B025010B")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B025010D"))
+		    (object State_Transition
+			quid       	"48C8B04B036B"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar el modal de formulario <Registrar nuevo Usuario>"
+			supplier_quidu 	"48C8ACCC005E"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			client_quidu 	"48C8A9940020"
+			Event      	(object Event "Presionar btnVolver"
+			    quid       	"48C8B04B036C")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B04B036E"))
+		    (object State_Transition
+			quid       	"48C8B07A036B"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Guardar registro en la BD"
+			supplier_quidu 	"48C8B06B004E"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::datos correctos?"
+			client_quidu 	"48C8AFA301B6"
+			Event      	(object Event "Correctos"
+			    quid       	"48C8B07A036C")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B07A036E"))
+		    (object State_Transition
+			quid       	"48C8B0A703B9"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Datos guardados correctamente?"
+			supplier_quidu 	"48C8B0A3034C"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Guardar registro en la BD"
+			client_quidu 	"48C8B06B004E"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B0A703BC"))
+		    (object State_Transition
+			quid       	"48C8B47D0233"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Error en la BD"
+			supplier_quidu 	"48C8AA9701C5"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Datos guardados correctamente?"
+			client_quidu 	"48C8B0A3034C"
+			Event      	(object Event "No se pudo guardar"
+			    quid       	"48C8B47D0234")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B47D0236"))
+		    (object State_Transition
+			quid       	"48C8B493035C"
+			supplier   	"$UNNAMED$6"
+			supplier_quidu 	"48C8B4910129"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Error en la BD"
+			client_quidu 	"48C8AA9701C5"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B493035F"))
+		    (object State_Transition
+			quid       	"48C8B4A20129"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Mostrar vista <Administrar Usuarios> con nuevo usuario registrado"
+			supplier_quidu 	"48C8B49C0177"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Datos guardados correctamente?"
+			client_quidu 	"48C8B0A3034C"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B4A2012C"))
+		    (object State_Transition
+			quid       	"48C8B50103AA"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnVolverAlaPaginaAnterior"
+			supplier_quidu 	"48C8B4E4005E"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::operacion?"
+			client_quidu 	"48C8AE750291"
+			Event      	(object Event "Presionar btnVolveralaPaginaAnterior"
+			    quid       	"48C8B50103AB")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B50103AD"))
+		    (object State_Transition
+			quid       	"48C8B55D011A"
+			label      	""
+			supplier   	"$UNNAMED$7"
+			supplier_quidu 	"48C8B55100FA"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnVolverAlaPaginaAnterior"
+			client_quidu 	"48C8B4E4005E"
+			Event      	(object Event "btnVolveralaPaginaAnterior = NULL?"
+			    quid       	"48C8B55D011B")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B55D011D"))
+		    (object State_Transition
+			quid       	"48C8B58903B9"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			supplier_quidu 	"48C8A9940020"
+			client     	"$UNNAMED$7"
+			client_quidu 	"48C8B55100FA"
+			Event      	(object Event "NULL"
+			    quid       	"48C8B58903BA")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B58903BC"))
+		    (object State_Transition
+			quid       	"48C8B597037B"
+			supplier   	"$UNNAMED$8"
+			supplier_quidu 	"48C8B595005E"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			client_quidu 	"48C8A9940020"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B597037E"))
+		    (object State_Transition
+			quid       	"48C8B5AF00CB"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::btnNuevoUsuario = NULL?"
+			supplier_quidu 	"48C8ACA203D9"
+			client     	"$UNNAMED$7"
+			client_quidu 	"48C8B55100FA"
+			Event      	(object Event "NOT NULL"
+			    quid       	"48C8B5AF00CC")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B5AF00CE"))
+		    (object State_Transition
+			quid       	"48C8B78403D9"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Satisfactorio"
+			supplier_quidu 	"48C8B7720129"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Datos guardados correctamente?"
+			client_quidu 	"48C8B0A3034C"
+			Event      	(object Event "Correcto"
+			    quid       	"48C8B78403DA")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B78403DC"))
+		    (object State_Transition
+			quid       	"48C8B7B301D5"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Mostrar vista <Administrar Usuarios> con nuevo usuario registrado"
+			supplier_quidu 	"48C8B49C0177"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Satisfactorio"
+			client_quidu 	"48C8B7720129"
+			Event      	(object Event "clic boton ver"
+			    quid       	"48C8B7B301D6")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B7B301D8"))
+		    (object State_Transition
+			quid       	"48C8B860035C"
+			label      	""
+			supplier   	"$UNNAMED$9"
+			supplier_quidu 	"48C8B85D0233"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnVerDetalles"
+			client_quidu 	"48C8AC0D035C"
+			Event      	(object Event "btnVerDetalles= NULL?"
+			    quid       	"48C8B860035D")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B860035F"))
+		    (object State_Transition
+			quid       	"48C8B8A4007D"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			supplier_quidu 	"48C8A9940020"
+			client     	"$UNNAMED$9"
+			client_quidu 	"48C8B85D0233"
+			Event      	(object Event "NULL"
+			    quid       	"48C8B8A4007E")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B8A40080"))
+		    (object State_Transition
+			quid       	"48C8B8C5005E"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Buscar el usuario correspondiente en la BD"
+			supplier_quidu 	"48C8B8B5030E"
+			client     	"$UNNAMED$9"
+			client_quidu 	"48C8B85D0233"
+			Event      	(object Event "NOT NULL"
+			    quid       	"48C8B8C5005F")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B8C50061"))
+		    (object State_Transition
+			quid       	"48C8B8DD037B"
+			documentation 	"usuario encontrado?"
+			label      	""
+			supplier   	"$UNNAMED$10"
+			supplier_quidu 	"48C8B8DA0168"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Buscar el usuario correspondiente en la BD"
+			client_quidu 	"48C8B8B5030E"
+			Event      	(object Event "usuario encontrado?"
+			    quid       	"48C8B8DD037C")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B8DD037E"))
+		    (object State_Transition
+			quid       	"48C8B91203B9"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Error en la BD"
+			supplier_quidu 	"48C8AA9701C5"
+			client     	"$UNNAMED$10"
+			client_quidu 	"48C8B8DA0168"
+			Event      	(object Event "cliente no encontrado"
+			    quid       	"48C8B91203BA")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B91203BC"))
+		    (object State_Transition
+			quid       	"48C8B92C03D9"
+			supplier   	"$UNNAMED$11"
+			supplier_quidu 	"48C8B9280223"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			client_quidu 	"48C8A9940020"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B92C03DC"))
+		    (object State_Transition
+			quid       	"48C8B92F0262"
+			supplier   	"$UNNAMED$12"
+			supplier_quidu 	"48C8B92A010A"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Error en la BD"
+			client_quidu 	"48C8AA9701C5"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8B92F0265"))
+		    (object State_Transition
+			quid       	"48C8BA2B031D"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Mostrar Registro del usuario Seleccionado en vista <Datos del usuario>"
+			supplier_quidu 	"48C8BA00030E"
+			client     	"$UNNAMED$10"
+			client_quidu 	"48C8B8DA0168"
+			Event      	(object Event "busqueda exitosa"
+			    quid       	"48C8BA2B031E")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BA2B0320"))
+		    (object State_Transition
+			quid       	"48C8BA5003AA"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::NewActivity7"
+			supplier_quidu 	"48C8BDBC006E"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Mostrar Registro del usuario Seleccionado en vista <Datos del usuario>"
+			client_quidu 	"48C8BA00030E"
+			Event      	(object Event "pressionar btnEditar"
+			    quid       	"48C8BA5003AB")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BA5003AD"))
+		    (object State_Transition
+			quid       	"48C8BAD3037B"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnEditarUsuario"
+			supplier_quidu 	"48C8BA8300CB"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Mostrar Registro del usuario Seleccionado en vista <Datos del usuario>"
+			client_quidu 	"48C8BA00030E"
+			Event      	(object Event "Presionar btnEditarUsario"
+			    quid       	"48C8BAD3037C")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BAD3037E"))
+		    (object State_Transition
+			quid       	"48C8BAEE0291"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::btnEditarUsuario = NULL?"
+			supplier_quidu 	"48C8BAE9034C"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnEditarUsuario"
+			client_quidu 	"48C8BA8300CB"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BAEE0294"))
+		    (object State_Transition
+			quid       	"48C8BB6B03C9"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			supplier_quidu 	"48C8A9940020"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::btnEditarUsuario = NULL?"
+			client_quidu 	"48C8BAE9034C"
+			Event      	(object Event "NULL"
+			    quid       	"48C8BB6B03CA")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BB6B03CC"))
+		    (object State_Transition
+			quid       	"48C8BB73004E"
+			supplier   	"$UNNAMED$13"
+			supplier_quidu 	"48C8BB700187"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			client_quidu 	"48C8A9940020"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BB730051"))
+		    (object State_Transition
+			quid       	"48C8BBAC0158"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar verificar si los datos ingresados son validos"
+			supplier_quidu 	"48C8BB8C02A0"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::btnEditarUsuario = NULL?"
+			client_quidu 	"48C8BAE9034C"
+			Event      	(object Event "NOT NULL"
+			    quid       	"48C8BBAC0159")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BBAC015B"))
+		    (object State_Transition
+			quid       	"48C8BE3F00DB"
+			label      	""
+			supplier   	"$UNNAMED$15"
+			supplier_quidu 	"48C8BE3501C5"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar verificar si los datos ingresados son validos"
+			client_quidu 	"48C8BB8C02A0"
+			Event      	(object Event "verificar datos"
+			    quid       	"48C8BE3F00DC")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BE3F00DE"))
+		    (object State_Transition
+			quid       	"48C8BE90035C"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			supplier_quidu 	"48C8A9940020"
+			client     	"$UNNAMED$15"
+			client_quidu 	"48C8BE3501C5"
+			Event      	(object Event "Incorrectos"
+			    quid       	"48C8BE90035D")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BE90035F"))
+		    (object State_Transition
+			quid       	"48C8BEA40158"
+			supplier   	"$UNNAMED$16"
+			supplier_quidu 	"48C8BEA20204"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			client_quidu 	"48C8A9940020"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BEA4015B"))
+		    (object State_Transition
+			quid       	"48C8BEC80148"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Validar btnEditarUsuario"
+			supplier_quidu 	"48C8BA8300CB"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Algo salio mal"
+			client_quidu 	"48C8A9940020"
+			Event      	(object Event "press btnVolver"
+			    quid       	"48C8BEC80149")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BEC8014B"))
+		    (object State_Transition
+			quid       	"48C8BF30038B"
+			label      	""
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Acepta la modificación del Usuario en la BD"
+			supplier_quidu 	"48C8BF260129"
+			client     	"$UNNAMED$15"
+			client_quidu 	"48C8BE3501C5"
+			Event      	(object Event "correctos"
+			    quid       	"48C8BF30038C")
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BF30038E"))
+		    (object State_Transition
+			quid       	"48C8BF58034C"
+			supplier   	"$UNNAMED$17"
+			supplier_quidu 	"48C8BF54007D"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Acepta la modificación del Usuario en la BD"
+			client_quidu 	"48C8BF260129"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BF58034F"))
+		    (object State_Transition
+			quid       	"48C8BF720148"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Error en la BD"
+			supplier_quidu 	"48C8AA9701C5"
+			client     	"$UNNAMED$17"
+			client_quidu 	"48C8BF54007D"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BF72014B"))
+		    (object State_Transition
+			quid       	"48C8BF7701F4"
+			supplier   	"$UNNAMED$18"
+			supplier_quidu 	"48C8BF750020"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Error en la BD"
+			client_quidu 	"48C8AA9701C5"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BF7701F7"))
+		    (object State_Transition
+			quid       	"48C8BFCB009D"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Satisfactorio"
+			supplier_quidu 	"48C8B7720129"
+			client     	"$UNNAMED$17"
+			client_quidu 	"48C8BF54007D"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BFCB00A0"))
+		    (object State_Transition
+			quid       	"48C8BFCE0197"
+			supplier   	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::Mostrar vista <Datos de cliente> con detalles de cliente actualizadoS"
+			supplier_quidu 	"48C8BFAD0242"
+			client     	"Logical View::zzzzzzz::UC04 Administrar usuarios::State/Activity Model2::mostrar modal <Bienvenido!, Administrador>:Satisfactorio"
+			client_quidu 	"48C8B7720129"
+			sendEvent  	(object sendEvent
+			    quid       	"48C8BFCE019A")))
+		objectflows 	(list objectflow_list)
+		statediagrams 	(list StateDiagrams
+		    (object ActivityDiagram "AD_AdministrarUsuarios"
+			quid       	"48C8A5ED0040"
+			title      	"AD_AdministrarUsuarios"
+			zoom       	61
+			max_height 	28350
+			max_width  	21600
+			origin_x   	1382
+			origin_y   	2459
+			items      	(list diagram_item_list
+			    (object Swimlane "usuario" @1
+				line_color 	3342489
+				quidu      	"48C8A60B01F4"
+				width      	628)
+			    (object StateView "StartState" "clic en el boton <Administrar usuarios>" @2
+				Parent_View 	@1
+				location   	(272, 224)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @3
+				    Parent_View 	@2
+				    location   	(314, 194)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    nlines     	1
+				    max_width  	696
+				    justify    	1
+				    label      	"clic en el boton <Administrar usuarios>"
+				    pctDist    	1.000000
+				    height     	0
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8A682004E"
+				autoResize 	TRUE)
+			    (object Swimlane "Sistema" @4
+				location   	(628, 0)
+				line_color 	3342489
+				quidu      	"48C8A61801A6"
+				width      	12346)
+			    (object ActivityStateView "Validar btnAdministrar_Usuario" @5
+				Parent_View 	@4
+				location   	(1744, 224)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@5
+				    location   	(1744, 224)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	418
+				    justify    	0
+				    label      	"Validar btnAdministrar_Usuario")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A6D401B6"
+				width      	524
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @6
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8A70A0197"
+				client     	@2
+				supplier   	@5
+				vertices   	(list Points
+				    (302, 224)
+				    (1517, 224))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "btnAdministrar_Usuarios = ??" @7
+				Parent_View 	@4
+				location   	(1744, 608)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @8
+				    Parent_View 	@7
+				    location   	(1800, 559)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor     	1
+				    nlines     	2
+				    max_width  	300
+				    justify    	1
+				    label      	"btnAdministrar_Usuarios = ??"
+				    pctDist    	1.000000
+				    height     	0
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A83801C5"
+				autoResize 	TRUE)
+			    (object TransView "" @9
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8A83D0129"
+				client     	@5
+				supplier   	@7
+				vertices   	(list Points
+				    (1744, 277)
+				    (1744, 571))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "Buscar todos los usuarios registrados" @10
+				Parent_View 	@4
+				location   	(2480, 784)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@10
+				    location   	(2480, 784)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	438
+				    justify    	0
+				    label      	"Buscar todos los usuarios registrados")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A9900204"
+				width      	544
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @11
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @12
+				    Parent_View 	@11
+				    location   	(2567, 662)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"not null"
+				    pctDist    	0.911344
+				    height     	86
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8A9E0037B"
+				client     	@7
+				supplier   	@10
+				vertices   	(list Points
+				    (1819, 608)
+				    (2481, 601)
+				    (2480, 731))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Algo salio mal" @13
+				Parent_View 	@4
+				location   	(1056, 608)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@13
+				    location   	(1056, 608)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	526
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Algo salio mal")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A9940020"
+				width      	632
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @14
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @15
+				    Parent_View 	@14
+				    location   	(1496, 653)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"null"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8A9B7010A"
+				client     	@7
+				supplier   	@13
+				vertices   	(list Points
+				    (1669, 608)
+				    (1324, 608))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "$UNNAMED$0" @16
+				Parent_View 	@4
+				location   	(1072, 832)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8A67E02B0"
+				autoResize 	TRUE)
+			    (object TransView "" @17
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8A9CB03B9"
+				client     	@13
+				supplier   	@16
+				vertices   	(list Points
+				    (1059, 661)
+				    (1069, 790))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "usuarios encontrados con existo?" @18
+				Parent_View 	@4
+				location   	(2480, 1072)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @19
+				    Parent_View 	@18
+				    location   	(2536, 1023)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor     	1
+				    nlines     	2
+				    max_width  	420
+				    justify    	1
+				    label      	"usuarios encontrados con existo?"
+				    pctDist    	1.000000
+				    height     	0
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AA1A01C5"
+				autoResize 	TRUE)
+			    (object TransView "" @20
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AA1E031D"
+				client     	@10
+				supplier   	@18
+				vertices   	(list Points
+				    (2480, 837)
+				    (2480, 1035))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Error en la BD" @21
+				Parent_View 	@4
+				location   	(1856, 1056)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@21
+				    location   	(1856, 1056)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	530
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Error en la BD")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AA9701C5"
+				width      	636
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @22
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @23
+				    Parent_View 	@22
+				    location   	(2264, 1112)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"No"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AAA90168"
+				client     	@18
+				supplier   	@21
+				vertices   	(list Points
+				    (2405, 1072)
+				    (2124, 1063))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "Mostrar registro de clientes en vista <Administrar usuarios>" @24
+				Parent_View 	@4
+				location   	(2737, 1408)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@24
+				    location   	(2737, 1409)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	604
+				    justify    	0
+				    label      	"Mostrar registro de clientes en vista <Administrar usuarios>")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AAC000FA"
+				width      	710
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @25
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @26
+				    Parent_View 	@25
+				    location   	(2620, 1205)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"Si"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AADA00CB"
+				client     	@18
+				supplier   	@24
+				vertices   	(list Points
+				    (2480, 1109)
+				    (2692, 1356))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "$UNNAMED$1" @27
+				Parent_View 	@4
+				location   	(1856, 1280)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8AAE701B6"
+				autoResize 	TRUE)
+			    (object TransView "" @28
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AAEB0010"
+				client     	@21
+				supplier   	@27
+				vertices   	(list Points
+				    (1856, 1109)
+				    (1856, 1238))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "$UNNAMED$2" @29
+				Parent_View 	@4
+				location   	(2736, 1696)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8ABBD036B"
+				autoResize 	TRUE)
+			    (object TransView "" @30
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @31
+				    Parent_View 	@30
+				    location   	(2781, 1560)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"Operacion?"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8ABC3004E"
+				client     	@24
+				supplier   	@29
+				vertices   	(list Points
+				    (2736, 1460)
+				    (2736, 1659))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "Validar btnVerDetalles" @32
+				Parent_View 	@4
+				location   	(7248, 1680)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@32
+				    location   	(7248, 1681)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	302
+				    justify    	0
+				    label      	"Validar btnVerDetalles")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AC0D035C"
+				width      	408
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @33
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @34
+				    Parent_View 	@33
+				    location   	(4937, 1644)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"Presionar btnVerDetalles"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AC49002F"
+				client     	@29
+				supplier   	@32
+				vertices   	(list Points
+				    (2811, 1696)
+				    (7063, 1680))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "Validar btnNuevoUsuario" @35
+				Parent_View 	@4
+				location   	(2736, 2016)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@35
+				    location   	(2736, 2017)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	310
+				    justify    	0
+				    label      	"Validar btnNuevoUsuario")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AC38034C"
+				width      	416
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @36
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @37
+				    Parent_View 	@36
+				    location   	(2781, 1848)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	575
+				    justify    	0
+				    label      	"Presionar btnNuevoUsuario"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AC46038B"
+				client     	@29
+				supplier   	@35
+				vertices   	(list Points
+				    (2736, 1733)
+				    (2736, 1964))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "btnNuevoUsuario = NULL?" @38
+				Parent_View 	@4
+				location   	(2736, 2240)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @39
+				    Parent_View 	@38
+				    location   	(2792, 2191)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor     	1
+				    nlines     	2
+				    max_width  	300
+				    justify    	1
+				    label      	"btnNuevoUsuario = NULL?"
+				    pctDist    	1.000000
+				    height     	0
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8ACA203D9"
+				autoResize 	TRUE)
+			    (object TransView "" @40
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8ACA80139"
+				client     	@35
+				supplier   	@38
+				vertices   	(list Points
+				    (2736, 2069)
+				    (2736, 2203))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar el modal de formulario <Registrar nuevo Usuario>" @41
+				Parent_View 	@4
+				location   	(2736, 2512)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@41
+				    location   	(2736, 2513)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	560
+				    justify    	0
+				    label      	"mostrar el modal de formulario <Registrar nuevo Usuario>")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8ACCC005E"
+				width      	666
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @42
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @43
+				    Parent_View 	@42
+				    location   	(2781, 2368)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"not null"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AD38030E"
+				client     	@38
+				supplier   	@41
+				vertices   	(list Points
+				    (2736, 2277)
+				    (2736, 2460))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Algo salio mal" @44
+				Parent_View 	@4
+				location   	(1920, 2240)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@44
+				    location   	(1920, 2240)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	526
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Algo salio mal")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A9940020"
+				width      	632
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @45
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @46
+				    Parent_View 	@45
+				    location   	(2424, 2285)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"null"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AD0C038B"
+				client     	@38
+				supplier   	@44
+				vertices   	(list Points
+				    (2661, 2240)
+				    (2188, 2240))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "$UNNAMED$3" @47
+				Parent_View 	@4
+				location   	(1360, 2256)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8AD1800FA"
+				autoResize 	TRUE)
+			    (object TransView "" @48
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AD1A0214"
+				client     	@44
+				supplier   	@47
+				vertices   	(list Points
+				    (1652, 2247)
+				    (1402, 2254))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "operacion?" @49
+				Parent_View 	@4
+				location   	(2048, 2512)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @50
+				    Parent_View 	@49
+				    location   	(2198, 2488)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor     	1
+				    nlines     	1
+				    max_width  	191
+				    justify    	1
+				    label      	"operacion?"
+				    pctDist    	2.124249
+				    height     	20
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AE750291"
+				autoResize 	TRUE)
+			    (object TransView "" @51
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @52
+				    Parent_View 	@51
+				    location   	(2290, 2557)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    hidden     	TRUE
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	60
+				    justify    	0
+				    label      	""
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AE7A01E5"
+				client     	@41
+				supplier   	@49
+				vertices   	(list Points
+				    (2456, 2512)
+				    (2123, 2512))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "validar btnGuardar" @53
+				Parent_View 	@4
+				location   	(1376, 2512)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@53
+				    location   	(1376, 2512)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	269
+				    justify    	0
+				    label      	"validar btnGuardar")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AE9602B0"
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @54
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @55
+				    Parent_View 	@54
+				    location   	(1760, 2477)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"presionar btnGuardar"
+				    pctDist    	0.502347
+				    height     	36
+				    orientation 	1)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AEDA00DB"
+				client     	@49
+				supplier   	@53
+				vertices   	(list Points
+				    (1973, 2512)
+				    (1547, 2512))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "$UNNAMED$4" @56
+				Parent_View 	@4
+				location   	(1376, 2752)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AEFF0000"
+				autoResize 	TRUE)
+			    (object TransView "" @57
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @58
+				    Parent_View 	@57
+				    location   	(1421, 2640)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"btnGuardar = NULL?"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AF06011A"
+				client     	@53
+				supplier   	@56
+				vertices   	(list Points
+				    (1376, 2565)
+				    (1376, 2715))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "verificar si los datos ingresados son validos" @59
+				Parent_View 	@4
+				location   	(1840, 2992)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@59
+				    location   	(1840, 2992)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	442
+				    justify    	0
+				    label      	"verificar si los datos ingresados son validos")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AF2400BC"
+				width      	548
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @60
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @61
+				    Parent_View 	@60
+				    location   	(1852, 2848)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	220
+				    justify    	0
+				    label      	"NOT NULL"
+				    pctDist    	0.839353
+				    height     	4
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AF65009D"
+				client     	@56
+				supplier   	@59
+				vertices   	(list Points
+				    (1451, 2752)
+				    (1853, 2768)
+				    (1843, 2940))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Algo salio mal" @62
+				Parent_View 	@4
+				location   	(1056, 2976)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@62
+				    location   	(1056, 2976)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	526
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Algo salio mal")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A9940020"
+				width      	632
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @63
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @64
+				    Parent_View 	@63
+				    location   	(1096, 2794)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	108
+				    justify    	0
+				    label      	"NULL"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AF4D0281"
+				client     	@56
+				supplier   	@62
+				vertices   	(list Points
+				    (1301, 2752)
+				    (1066, 2749)
+				    (1058, 2923))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "$UNNAMED$5" @65
+				Parent_View 	@4
+				location   	(1056, 3216)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8AF540129"
+				autoResize 	TRUE)
+			    (object TransView "" @66
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AF56030E"
+				client     	@62
+				supplier   	@65
+				vertices   	(list Points
+				    (1056, 3029)
+				    (1056, 3174))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "datos correctos?" @67
+				Parent_View 	@4
+				location   	(1840, 3280)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @68
+				    Parent_View 	@67
+				    location   	(1896, 3231)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor     	1
+				    nlines     	2
+				    max_width  	300
+				    justify    	1
+				    label      	"datos correctos?"
+				    pctDist    	1.000000
+				    height     	0
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AFA301B6"
+				autoResize 	TRUE)
+			    (object TransView "" @69
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8AFE70168"
+				client     	@59
+				supplier   	@67
+				vertices   	(list Points
+				    (1840, 3045)
+				    (1840, 3243))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Algo salio mal" @70
+				Parent_View 	@4
+				location   	(2496, 3520)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@70
+				    location   	(2496, 3520)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	526
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Algo salio mal")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A9940020"
+				width      	632
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @71
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @72
+				    Parent_View 	@71
+				    location   	(2283, 3382)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"incorrecto"
+				    pctDist    	0.772945
+				    height     	48
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B025010A"
+				client     	@67
+				supplier   	@70
+				vertices   	(list Points
+				    (1915, 3280)
+				    (2370, 3468))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object TransView "" @73
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @74
+				    Parent_View 	@73
+				    location   	(2572, 3008)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"Presionar btnVolver"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B04B036B"
+				client     	@70
+				supplier   	@41
+				vertices   	(list Points
+				    (2508, 3468)
+				    (2723, 2565))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "Guardar registro en la BD" @75
+				Parent_View 	@4
+				location   	(1600, 3616)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@75
+				    location   	(1600, 3614)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	298
+				    justify    	0
+				    label      	"Guardar registro en la BD")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8B06B004E"
+				width      	404
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @76
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @77
+				    Parent_View 	@76
+				    location   	(1776, 3468)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"Correctos"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B07A036B"
+				client     	@67
+				supplier   	@75
+				vertices   	(list Points
+				    (1840, 3317)
+				    (1641, 3564))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "Datos guardados correctamente?" @78
+				Parent_View 	@4
+				location   	(1600, 3888)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @79
+				    Parent_View 	@78
+				    location   	(1656, 3839)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor     	1
+				    nlines     	2
+				    max_width  	300
+				    justify    	1
+				    label      	"Datos guardados correctamente?"
+				    pctDist    	1.000000
+				    height     	0
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8B0A3034C"
+				autoResize 	TRUE)
+			    (object TransView "" @80
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B0A703B9"
+				client     	@75
+				supplier   	@78
+				vertices   	(list Points
+				    (1600, 3669)
+				    (1600, 3851))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Error en la BD" @81
+				Parent_View 	@4
+				location   	(1006, 4160)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@81
+				    location   	(1006, 4158)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	530
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Error en la BD")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AA9701C5"
+				width      	636
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @82
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @83
+				    Parent_View 	@82
+				    location   	(1183, 3931)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"No se pudo guardar"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B47D0233"
+				client     	@78
+				supplier   	@81
+				vertices   	(list Points
+				    (1525, 3888)
+				    (1066, 3885)
+				    (1017, 4107))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "$UNNAMED$6" @84
+				Parent_View 	@4
+				location   	(1008, 4384)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8B4910129"
+				autoResize 	TRUE)
+			    (object TransView "" @85
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B493035C"
+				client     	@81
+				supplier   	@84
+				vertices   	(list Points
+				    (1006, 4212)
+				    (1007, 4342))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "Mostrar vista <Administrar Usuarios> con nuevo usuario registrado" @86
+				Parent_View 	@4
+				location   	(2336, 4528)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @87
+				    Parent_View 	@86
+				    location   	(2390, 4486)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    nlines     	1
+				    max_width  	1203
+				    justify    	1
+				    label      	"Mostrar vista <Administrar Usuarios> con nuevo usuario registrado"
+				    pctDist    	1.000000
+				    height     	0
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8B49C0177"
+				autoResize 	TRUE)
+			    (object ActivityStateView "Validar btnVolverAlaPaginaAnterior" @88
+				Parent_View 	@4
+				location   	(3120, 2768)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@88
+				    location   	(3120, 2769)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	464
+				    justify    	0
+				    label      	"Validar btnVolverAlaPaginaAnterior")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8B4E4005E"
+				width      	570
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @89
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @90
+				    Parent_View 	@89
+				    location   	(2445, 2710)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	667
+				    justify    	0
+				    label      	"Presionar btnVolveralaPaginaAnterior"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B50103AA"
+				client     	@49
+				supplier   	@88
+				vertices   	(list Points
+				    (2123, 2512)
+				    (2334, 2752)
+				    (2875, 2763))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "$UNNAMED$7" @91
+				Parent_View 	@4
+				location   	(4176, 2768)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8B55100FA"
+				autoResize 	TRUE)
+			    (object TransView "" @92
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @93
+				    Parent_View 	@92
+				    location   	(3732, 2724)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	639
+				    justify    	0
+				    label      	"btnVolveralaPaginaAnterior = NULL?"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B55D011A"
+				client     	@88
+				supplier   	@91
+				vertices   	(list Points
+				    (3364, 2768)
+				    (4101, 2768))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object TransView "" @94
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @95
+				    Parent_View 	@94
+				    location   	(4185, 2643)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"NOT NULL"
+				    pctDist    	0.048040
+				    height     	9
+				    orientation 	1)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B5AF00CB"
+				client     	@91
+				supplier   	@38
+				vertices   	(list Points
+				    (4176, 2731)
+				    (4177, 2244)
+				    (2811, 2240))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Algo salio mal" @96
+				Parent_View 	@4
+				location   	(4176, 3088)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@96
+				    location   	(4176, 3089)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	526
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Algo salio mal")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A9940020"
+				width      	632
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @97
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @98
+				    Parent_View 	@97
+				    location   	(4221, 2920)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"NULL"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B58903B9"
+				client     	@91
+				supplier   	@96
+				vertices   	(list Points
+				    (4176, 2805)
+				    (4176, 3036))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "$UNNAMED$8" @99
+				Parent_View 	@4
+				location   	(4176, 3328)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8B595005E"
+				autoResize 	TRUE)
+			    (object TransView "" @100
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B597037B"
+				client     	@96
+				supplier   	@99
+				vertices   	(list Points
+				    (4176, 3141)
+				    (4176, 3286))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object NoteView @101
+				Parent_View 	@4
+				location   	(3776, 2512)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@101
+				    location   	(3591, 2375)
+				    fill_color 	13434879
+				    nlines     	5
+				    max_width  	334
+				    justify    	1
+				    label      	
+|ID
+|correo Electronico
+|Usuario
+|Contraseña
+|Rol
+				    )
+				line_color 	3342489
+				fill_color 	13434879
+				width      	394
+				height     	287)
+			    (object AttachView "" @102
+				stereotype 	TRUE
+				line_color 	3342489
+				client     	@41
+				supplier   	@101
+				vertices   	(list Points
+				    (3016, 2512)
+				    (3578, 2512))
+				line_style 	0)
+			    (object AttachView "" @103
+				stereotype 	TRUE
+				line_color 	3342489
+				client     	@59
+				supplier   	@101
+				vertices   	(list Points
+				    (2076, 2990)
+				    (3778, 2981)
+				    (3776, 2655))
+				line_style 	0)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Satisfactorio" @104
+				Parent_View 	@4
+				location   	(2320, 4080)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@104
+				    location   	(2320, 4078)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	636
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Satisfactorio")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8B7720129"
+				width      	742
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @105
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @106
+				    Parent_View 	@105
+				    location   	(2052, 3843)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"Correcto"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B78403D9"
+				client     	@78
+				supplier   	@104
+				vertices   	(list Points
+				    (1675, 3888)
+				    (2285, 3887)
+				    (2310, 4028))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object TransView "" @107
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @108
+				    Parent_View 	@107
+				    location   	(2372, 4308)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"clic boton ver"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B7B301D5"
+				client     	@104
+				supplier   	@86
+				vertices   	(list Points
+				    (2321, 4132)
+				    (2334, 4486))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "$UNNAMED$9" @109
+				Parent_View 	@4
+				location   	(7232, 2048)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8B85D0233"
+				autoResize 	TRUE)
+			    (object TransView "" @110
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @111
+				    Parent_View 	@110
+				    location   	(7284, 1954)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"btnVerDetalles= NULL?"
+				    pctDist    	0.786684
+				    height     	49
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B860035C"
+				client     	@32
+				supplier   	@109
+				vertices   	(list Points
+				    (7245, 1733)
+				    (7232, 2011))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Algo salio mal" @112
+				Parent_View 	@4
+				location   	(8096, 2048)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@112
+				    location   	(8096, 2049)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	524
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Algo salio mal")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A9940020"
+				width      	630
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @113
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @114
+				    Parent_View 	@113
+				    location   	(7568, 2004)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"NULL"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B8A4007D"
+				client     	@109
+				supplier   	@112
+				vertices   	(list Points
+				    (7307, 2048)
+				    (7829, 2048))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "Buscar el usuario correspondiente en la BD" @115
+				Parent_View 	@4
+				location   	(7216, 2320)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@115
+				    location   	(7216, 2321)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	458
+				    justify    	0
+				    label      	"Buscar el usuario correspondiente en la BD")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8B8B5030E"
+				width      	564
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @116
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @117
+				    Parent_View 	@116
+				    location   	(7271, 2179)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"NOT NULL"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B8C5005E"
+				client     	@109
+				supplier   	@115
+				vertices   	(list Points
+				    (7232, 2085)
+				    (7219, 2267))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "$UNNAMED$10" @118
+				Parent_View 	@4
+				location   	(7216, 2640)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @119
+				    Parent_View 	@118
+				    location   	(7272, 2591)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    hidden     	TRUE
+				    anchor     	1
+				    nlines     	1
+				    max_width  	424
+				    justify    	1
+				    label      	""
+				    pctDist    	1.000000
+				    height     	0
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8B8DA0168"
+				autoResize 	TRUE)
+			    (object TransView "" @120
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @121
+				    Parent_View 	@120
+				    location   	(7261, 2488)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"usuario encontrado?"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B8DD037B"
+				client     	@115
+				supplier   	@118
+				vertices   	(list Points
+				    (7216, 2373)
+				    (7216, 2603))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Error en la BD" @122
+				Parent_View 	@4
+				location   	(8112, 2656)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@122
+				    location   	(8112, 2657)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	524
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Error en la BD")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AA9701C5"
+				width      	630
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @123
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @124
+				    Parent_View 	@123
+				    location   	(7569, 2601)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"cliente no encontrado"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B91203B9"
+				client     	@118
+				supplier   	@122
+				vertices   	(list Points
+				    (7291, 2640)
+				    (7845, 2650))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "$UNNAMED$11" @125
+				Parent_View 	@4
+				location   	(8704, 2080)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8B9280223"
+				autoResize 	TRUE)
+			    (object TransView "" @126
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B92C03D9"
+				client     	@112
+				supplier   	@125
+				vertices   	(list Points
+				    (8361, 2061)
+				    (8662, 2077))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "$UNNAMED$12" @127
+				Parent_View 	@4
+				location   	(8784, 2656)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8B92A010A"
+				autoResize 	TRUE)
+			    (object TransView "" @128
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8B92F0262"
+				client     	@122
+				supplier   	@127
+				vertices   	(list Points
+				    (8379, 2656)
+				    (8742, 2656))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "Mostrar Registro del usuario Seleccionado en vista <Datos del usuario>" @129
+				Parent_View 	@4
+				location   	(7216, 3040)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@129
+				    location   	(7216, 3041)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	742
+				    justify    	0
+				    label      	"Mostrar Registro del usuario Seleccionado en vista <Datos del usuario>")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8BA00030E"
+				width      	848
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @130
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @131
+				    Parent_View 	@130
+				    location   	(7261, 2832)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"busqueda exitosa"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BA2B031D"
+				client     	@118
+				supplier   	@129
+				vertices   	(list Points
+				    (7216, 2677)
+				    (7216, 2988))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "Validar btnEditarUsuario" @132
+				Parent_View 	@4
+				location   	(7216, 3376)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@132
+				    location   	(7216, 3377)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	302
+				    justify    	0
+				    label      	"Validar btnEditarUsuario")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8BA8300CB"
+				width      	408
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @133
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @134
+				    Parent_View 	@133
+				    location   	(7261, 3208)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"Presionar btnEditarUsario"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BAD3037B"
+				client     	@129
+				supplier   	@132
+				vertices   	(list Points
+				    (7216, 3093)
+				    (7216, 3324))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "btnEditarUsuario = NULL?" @135
+				Parent_View 	@4
+				location   	(7232, 3600)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @136
+				    Parent_View 	@135
+				    location   	(7288, 3551)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor     	1
+				    nlines     	2
+				    max_width  	300
+				    justify    	1
+				    label      	"btnEditarUsuario = NULL?"
+				    pctDist    	1.000000
+				    height     	0
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8BAE9034C"
+				autoResize 	TRUE)
+			    (object TransView "" @137
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BAEE0291"
+				client     	@132
+				supplier   	@135
+				vertices   	(list Points
+				    (7219, 3429)
+				    (7232, 3563))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Algo salio mal" @138
+				Parent_View 	@4
+				location   	(6416, 3568)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@138
+				    location   	(6416, 3569)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	524
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Algo salio mal")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A9940020"
+				width      	630
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @139
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @140
+				    Parent_View 	@139
+				    location   	(6919, 3635)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"NULL"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BB6B03C9"
+				client     	@135
+				supplier   	@138
+				vertices   	(list Points
+				    (7157, 3600)
+				    (6682, 3579))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "$UNNAMED$13" @141
+				Parent_View 	@4
+				location   	(6400, 3888)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8BB700187"
+				autoResize 	TRUE)
+			    (object TransView "" @142
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BB73004E"
+				client     	@138
+				supplier   	@141
+				vertices   	(list Points
+				    (6413, 3620)
+				    (6402, 3845))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar verificar si los datos ingresados son validos" @143
+				Parent_View 	@4
+				location   	(7376, 3936)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@143
+				    location   	(7376, 3937)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	570
+				    justify    	0
+				    label      	"mostrar verificar si los datos ingresados son validos")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8BB8C02A0"
+				width      	676
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @144
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @145
+				    Parent_View 	@144
+				    location   	(7332, 3743)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"NOT NULL"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BBAC0158"
+				client     	@135
+				supplier   	@143
+				vertices   	(list Points
+				    (7232, 3637)
+				    (7350, 3883))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object NoteView @146
+				Parent_View 	@4
+				location   	(8352, 3088)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@146
+				    location   	(8172, 2923)
+				    fill_color 	13434879
+				    nlines     	7
+				    max_width  	325
+				    justify    	1
+				    label      	
+|id
+|correo electronico
+|Usuario
+|Contraseña
+|Rol
+|Estado
+				    )
+				line_color 	3342489
+				fill_color 	13434879
+				width      	385
+				height     	342)
+			    (object AttachView "" @147
+				stereotype 	TRUE
+				line_color 	3342489
+				client     	@129
+				supplier   	@146
+				vertices   	(list Points
+				    (7563, 3054)
+				    (8159, 3079))
+				line_style 	0)
+			    (object DecisionView "$UNNAMED$15" @148
+				Parent_View 	@4
+				location   	(7392, 4352)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8BE3501C5"
+				autoResize 	TRUE)
+			    (object TransView "" @149
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @150
+				    Parent_View 	@149
+				    location   	(7429, 4150)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"verificar datos"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BE3F00DB"
+				client     	@143
+				supplier   	@148
+				vertices   	(list Points
+				    (7377, 3988)
+				    (7392, 4315))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Algo salio mal" @151
+				Parent_View 	@4
+				location   	(8416, 4368)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@151
+				    location   	(8416, 4369)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	524
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Algo salio mal")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8A9940020"
+				width      	630
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @152
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @153
+				    Parent_View 	@152
+				    location   	(7808, 4313)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"Incorrectos"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BE90035C"
+				client     	@148
+				supplier   	@151
+				vertices   	(list Points
+				    (7467, 4352)
+				    (8148, 4363))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object TransView "" @154
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @155
+				    Parent_View 	@154
+				    location   	(8407, 3390)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"press btnVolver"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BEC80148"
+				client     	@151
+				supplier   	@132
+				vertices   	(list Points
+				    (8418, 4316)
+				    (8458, 3451)
+				    (8438, 3344)
+				    (7400, 3371))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "Acepta la modificación del Usuario en la BD" @156
+				Parent_View 	@4
+				location   	(6800, 4496)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@156
+				    location   	(6800, 4502)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	449
+				    justify    	0
+				    label      	"Acepta la modificación del Usuario en la BD")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8BF260129"
+				width      	553
+				height     	102
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @157
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @158
+				    Parent_View 	@157
+				    location   	(7214, 4366)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"correctos"
+				    pctDist    	0.300614
+				    height     	16
+				    orientation 	1)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BF30038B"
+				client     	@148
+				supplier   	@156
+				vertices   	(list Points
+				    (7317, 4352)
+				    (6983, 4445))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object DecisionView "$UNNAMED$17" @159
+				Parent_View 	@4
+				location   	(6800, 4720)
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8BF54007D"
+				autoResize 	TRUE)
+			    (object TransView "" @160
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BF58034C"
+				client     	@156
+				supplier   	@159
+				vertices   	(list Points
+				    (6800, 4547)
+				    (6800, 4683))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Error en la BD" @161
+				Parent_View 	@4
+				location   	(6176, 4704)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@161
+				    location   	(6176, 4707)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	614
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Error en la BD")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8AA9701C5"
+				width      	720
+				annotation 	1
+				autoResize 	TRUE)
+			    (object TransView "" @162
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BF720148"
+				client     	@159
+				supplier   	@161
+				vertices   	(list Points
+				    (6725, 4720)
+				    (6478, 4712))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object StateView "EndState" "$UNNAMED$18" @163
+				Parent_View 	@4
+				location   	(6160, 4928)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8BF750020"
+				autoResize 	TRUE)
+			    (object TransView "" @164
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BF7701F4"
+				client     	@161
+				supplier   	@163
+				vertices   	(list Points
+				    (6172, 4756)
+				    (6163, 4886))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object ActivityStateView "mostrar modal <Bienvenido!, Administrador>:Satisfactorio" @165
+				Parent_View 	@4
+				location   	(7680, 4592)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@165
+				    location   	(7680, 4595)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	614
+				    justify    	0
+				    label      	"mostrar modal <Bienvenido!, Administrador>:Satisfactorio")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"48C8B7720129"
+				width      	720
+				annotation 	1
+				autoResize 	TRUE)
+			    (object StateView "EndState" "Mostrar vista <Datos de cliente> con detalles de cliente actualizadoS" @166
+				Parent_View 	@4
+				location   	(7776, 4960)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    charSet    	254
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @167
+				    Parent_View 	@166
+				    location   	(7830, 4918)
+				    font       	(object Font
+					size       	9
+					face       	"Arial"
+					charSet    	254
+					bold       	FALSE
+					italics    	TRUE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    nlines     	1
+				    max_width  	1221
+				    justify    	1
+				    label      	"Mostrar vista <Datos de cliente> con detalles de cliente actualizadoS"
+				    pctDist    	1.000000
+				    height     	0
+				    orientation 	0)
+				icon_style 	"Icon"
+				line_color 	3342489
+				quidu      	"48C8BFAD0242"
+				autoResize 	TRUE)
+			    (object Swimlane "" @168
+				location   	(12974, 0)
+				line_color 	3342489
+				width      	450)
+			    (object TransView "" @169
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BFCB009D"
+				client     	@159
+				supplier   	@165
+				vertices   	(list Points
+				    (6875, 4720)
+				    (7402, 4636))
+				line_style 	0
+				x_offset   	FALSE)
+			    (object TransView "" @170
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"48C8BFCE0197"
+				client     	@165
+				supplier   	@166
+				vertices   	(list Points
+				    (7693, 4644)
+				    (7765, 4917))
+				line_style 	0
+				x_offset   	FALSE)))))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "Main"
+	    quid       	"5C2AF3F0031C"
+	    title      	"Main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list))))
